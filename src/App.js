@@ -4,8 +4,8 @@ import { ApolloProvider, InMemoryCache } from '@apollo/react-hooks';
 import { Pokedex } from './page/Pokedex';
 import { PokemonDetailPage } from './page/PokemonDetailPage';
 import {
-  BrowserRouter,
-  Routes,
+  BrowserRouter as Router,
+  Switch,
   Route,
 } from "react-router-dom";
 import Navbar from './components/Navbar';
@@ -19,14 +19,20 @@ function App() {
   });
   return (
     <ApolloProvider client={client}>
-      <BrowserRouter>
+      <Router>
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Pokedex />} />
-          <Route exact path="/pokemon-detail/:name" element={<PokemonDetailPage />} />
-          <Route exact path="/my-pokemon" element={<MyPokemon />} />
-        </Routes>
-      </BrowserRouter>
+          <Switch>
+            <Route exact path="/">
+              <Pokedex />
+            </Route>
+            <Route exact path="/pokemon-detail/:name">
+              <PokemonDetailPage />
+            </Route>
+            <Route exact path="/my-pokemon">
+              <MyPokemon />
+            </Route>
+          </Switch>
+      </Router>
     </ApolloProvider>
   )
 }
