@@ -6,10 +6,10 @@ import { PokemonDetailPage } from './page/PokemonDetailPage';
 import {
   BrowserRouter,
   Routes,
-  Route
+  Route,
 } from "react-router-dom";
 import Navbar from './components/Navbar';
-import {MyPokemon} from './components/MyPokemon';
+import { MyPokemon } from './components/MyPokemon';
 
 
 function App() {
@@ -20,11 +20,11 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <BrowserRouter>
-        <Navbar/>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Pokedex />} />
-          <Route path="/pokemon-detail/:name" element={<PokemonDetailPage />} />
-          <Route path="/my-pokemon" element={<MyPokemon />} />
+          <Route exact path="/pokemon-detail/:name" element={<PokemonDetailPage />} />
+          <Route exact path="/my-pokemon" element={<MyPokemon />} />
         </Routes>
       </BrowserRouter>
     </ApolloProvider>
