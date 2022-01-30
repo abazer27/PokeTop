@@ -27,7 +27,7 @@ export function MyPokemon() {
     let newData = JSON.parse(localStorage.getItem(e));
     newData.release = true
     localStorage.setItem(e, JSON.stringify(newData))
-    setRelease(true)
+    setRelease(!release)
   }
   handlePokemon()
   const grid = css`

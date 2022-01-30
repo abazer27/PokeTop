@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# DEPLOY APP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[PokeTop](poke-top-one.vercel.app).
 
 ## Available Scripts
 
