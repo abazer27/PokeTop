@@ -121,7 +121,7 @@ export function MyPokemon() {
               <div css={child}>
                 <img src={pokeball} alt="pokeball" css={css`width:35px`} />
               </div>
-              {poke.release || release ?
+              {poke.release ?
                 <p css={danger}>Pokemon has Been Release</p>
                 :
                 <button onClick={() => { handleRelease(poke.nickname) }} css={button}>Release Pokemon ?</button>
