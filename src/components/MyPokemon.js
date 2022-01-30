@@ -1,8 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
-import React from 'react';
+import React ,{ useState } from 'react';
 import { css } from '@emotion/react';
-import { useState } from 'react/cjs/react.development';
 import pokeball from "./../assets/pokeball.svg"
 
 export function MyPokemon() {

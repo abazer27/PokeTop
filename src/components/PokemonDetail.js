@@ -1,14 +1,12 @@
 /** @jsxImportSource @emotion/react */
 
-import React from "react";
-import { useState } from "react/cjs/react.development";
+import React ,{ useState }from "react";
 import { CatchPoke } from "./CatchPoke";
 import { css } from "@emotion/react";
 import { theme } from "../assets/Theme";
 
 export function PokemonDetail({ detail }) {
   const [modal, setModal] = useState(false)
-
   const handleModal = () => {
     setModal(!modal)
   }
